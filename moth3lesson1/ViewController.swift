@@ -9,11 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var result: UILabel!
+    
+  var value = 0
+
+    @IBOutlet weak var login: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBAction func clickMinus(_ sender: Any) {
+        value = value - 1
+        
+        result.text = String(value)
+        print(value)
     }
-
-
+    
+    
+    @IBAction func clickPlus(_ sender: Any) {
+        value = value + 1
+        
+        result.text = String(value)
+        print(value)
+        
+        print(login.text)
+        print(password.text)
+    }
 }
 
